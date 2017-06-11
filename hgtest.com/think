@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+//命令终端执行的命令启动文件
+define('ROOT_PATH', str_replace('\\', '/', dirname(__DIR__)) . '/');
+define('APP_PATH', ROOT_PATH . 'app/');
+define('COMMON_PATH', APP_PATH . 'common/'); //common不对外访问
+define('CONF_PATH', COMMON_PATH . 'config/');
+
+// 加载系统常量和框架引导文件
+require CONF_PATH . 'constants.php';
+require THINK_PATH . 'console.php';
